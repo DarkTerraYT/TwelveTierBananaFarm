@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>TwelveTierBananaFarm</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>TwelveTierBananaFarm</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="FunkyFarm-Icon.png" />
+      <None Remove="FunkyFarm-Portrait.png" />
+      <None Remove="FunkyFarmDisplay.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include=".github\workflows\build.yml" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="PathsPlusPlus">
+        <HintPath>..\..\..\Desktop\BloonsTD6 - Modded\Mods\PathsPlusPlus.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <Import Project="..\btd6.targets" />
+</Project>
